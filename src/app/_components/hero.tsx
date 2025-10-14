@@ -6,7 +6,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react"
 import { Playfair_Display, Space_Grotesk } from "next/font/google"
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Github, Linkedin, MessageCircle, Twitter, Star, Sparkles, ArrowDown, ContactRound, Instagram, Facebook } from 'lucide-react';
+import { Linkedin, MessageCircle,  Sparkles, ArrowDown, ContactRound, Instagram, Facebook } from 'lucide-react';
 
   const playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "700", "900"] })
   const grotesk = Space_Grotesk({ subsets: ["latin"], weight: ["400", "500", "700"] })
@@ -17,13 +17,8 @@ export default function Hero() {
   const tl = gsap.timeline()
   const imgRef = useRef(null)
   const sectionRef = useRef(null)
-  const floatingElementsRef = useRef(null)
-  const particlesRef = useRef(null)
-  const textRef = useRef(null)
-  const cursorRef = useRef(null)
   const loadingRef = useRef(null)
   const imageWrapRef = useRef<HTMLDivElement | null>(null)
-  // Removed spotlight for clearer image
 
 
 // Loading animation
@@ -34,6 +29,7 @@ useEffect(() => {
   return () => clearTimeout(timer);
 }, []);
 
+// eslint-disable-next-line react-hooks/exhaustive-deps
 useLayoutEffect(() => {
   gsap.registerPlugin(ScrollTrigger);
   
@@ -125,8 +121,6 @@ useLayoutEffect(() => {
   // Button hover animation setup
   gsap.set(".cta-button", { transformOrigin: "center center" });
 
-  // Tilt-on-hover and moving glare for the image wrapper
-  const wrap = imageWrapRef.current as HTMLDivElement | null;
 
   // Scroll-triggered animations
   ScrollTrigger.create({

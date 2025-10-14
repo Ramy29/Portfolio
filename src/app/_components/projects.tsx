@@ -37,7 +37,6 @@ export default function Projects() {
       const img = slide.querySelector(".proj-img") as HTMLElement | null;
       const title = slide.querySelector(".proj-title") as HTMLElement | null;
       const desc = slide.querySelector(".proj-desc") as HTMLElement | null;
-      const tech = slide.querySelectorAll(".proj-chip");
 
       if (img) {
         gsap.from(img, {

@@ -244,13 +244,13 @@ export default function AboutMe() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className={`hero-title text-5xl md:text-7xl font-bold text-gray-900 leading-tight ${playfair.className}`}>
-                Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Ramy</span>
+                Hi, I am <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Ramy</span>
               </h1>
               <p className={`hero-subtitle text-2xl text-gray-700 ${grotesk.className}`}>
                 Frontend Developer & UI/UX Enthusiast
               </p>
               <p className="hero-description text-lg text-gray-600 leading-relaxed">
-                I'm passionate about creating beautiful, functional, and user-friendly web experiences. 
+                I am passionate about creating beautiful, functional, and user-friendly web experiences. 
                 With expertise in modern web technologies, I bring ideas to life through clean code and 
                 innovative design solutions.
               </p>
