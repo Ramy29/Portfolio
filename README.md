@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio (Next.js + Tailwind + GSAP)
+
+A modern, animation-rich personal portfolio built with Next.js 15, React 19, Tailwind CSS v4, and GSAP. It showcases projects, skills, and personality with smooth interactions, scroll-driven motion, and clean UI.
+
+## Tech Stack
+- Next.js 15 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- GSAP + ScrollTrigger
+- Lucide Icons
+
+## Features
+- Creative hero animations (masked reveal, float, tilt, scroll depth)
+- About Me with technical/soft skills and education timeline
+- Projects section with horizontal scrolling and per-slide reveals
+- Responsive design and accessible components
 
 ## Getting Started
+Prereqs: Node 18+ (or 20+), npm (or pnpm/yarn)
 
-First, run the development server:
-
+Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run the dev server:
+```bash
+npm run dev
+# open http://localhost:3000
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Build and start production:
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Lint:
+```bash
+npm run lint
+```
 
-## Learn More
+## Project Structure
+```text
+src/
+  app/
+    _components/
+      hero.tsx           # Landing hero with animations
+      about-me.tsx       # About page sections and motion
+      projects.tsx       # Horizontal projects carousel
+    globals.css          # Tailwind + theme tokens
+    layout.tsx           # Root layout
+    page.tsx             # Entry page
+  lib/
+    smooth-scroll.tsx    # Optional GSAP ScrollSmoother wrapper
+  components/
+    ui/button.tsx        # Reusable button
+public/
+  images/                # Assets (hero, projects, backgrounds)
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Configuration Notes
+- Tailwind v4 is enabled via `@import "tailwindcss"` in `src/app/globals.css`.
+- Theme tokens and color variables are defined in `globals.css` using `@theme inline`.
+- GSAP/ScrollTrigger is registered where needed inside components.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Images
+Place your images under `public/images/`, then reference them like:
+```tsx
+<Image src="/images/your-image.jpg" alt="..." width={...} height={...} />
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Customization Tips
+- Update project entries in `src/lib/projects.ts` (name, image, description, techStack, links).
+- Tweak animations inside `hero.tsx`, `about-me.tsx`, and `projects.tsx` (GSAP timelines).
+- Adjust theme colors in `globals.css` to match your brand.
 
-## Deploy on Vercel
+## Deployment
+Any Next.js-compatible host works (Vercel recommended):
+- Push to GitHub
+- Import the repo to Vercel
+- Build command: `npm run build`
+- Output: `.next`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Troubleshooting
+- If GSAP warnings appear, ensure effects only run client-side (`"use client"`) and plugins are registered once per component.
+- If images don’t load, verify paths under `public/images` and the `src` strings.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
