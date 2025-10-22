@@ -151,7 +151,7 @@ useLayoutEffect(() => {
         <div className="fixed inset-0 bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 flex items-center justify-center z-50">
           <div ref={loadingRef} className="text-center">
             <div className="w-20 h-20 border-4 border-white/30 border-t-white rounded-full animate-spin mb-4" />
-            <h2 className="text-2xl font-bold text-white">Loading Amazing Experience...</h2>
+            <h2 className="text-2xl font-bold text-white">Loading Amazing Experience....</h2>
           </div>
         </div>
       )}
