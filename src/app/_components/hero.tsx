@@ -29,7 +29,7 @@ useEffect(() => {
   return () => clearTimeout(timer);
 }, []);
 
-// eslint-disable-next-line react-hooks/exhaustive-deps
+
 useLayoutEffect(() => {
   gsap.registerPlugin(ScrollTrigger);
   
@@ -142,7 +142,7 @@ useLayoutEffect(() => {
     }
   });
 
-}, [isLoading]);
+}, [isLoading,tl]);
 
   return (
     <>
