@@ -92,9 +92,6 @@ useLayoutEffect(() => {
   // Smooth continuous rotation for the image itself
   gsap.to(imgRef.current, { rotate: 60, duration: 4, ease: "none", repeat: -1, transformOrigin: "50% 50%" });
 
-// Removed continuous float/rotation for calmer look
-
-
   // Typewriter effect for text
   tl.from(".hero-text", {
     y: 80,
@@ -158,11 +155,7 @@ useLayoutEffect(() => {
           </div>
         </div>
       )}
-
-      {/* Custom Cursor */}
-      <div 
-       
-      />
+      <div />
 
       <section ref={sectionRef} className={`min-h-screen bg-gradient-to-br from-purple-400 via-purple-500 to-pink-400 flex items-center justify-center p-4 relative overflow-hidden bg-[url('/images/heroBg.jpg')] bg-cover bg-center ${grotesk.className}`}>
       {/* Animated background particles */}
@@ -233,7 +226,7 @@ useLayoutEffect(() => {
             </p>
 
             <div className="flex items-center gap-4">
-            <a href="https://www.linkedin.com/in/ramy-esam-03845a226/">
+            <a href="https://is.gd/gbKRLQ">
               <Button 
                 className={`cta-button bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-full px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl ${grotesk.className}`}
                 onMouseEnter={(e) => {
@@ -243,7 +236,7 @@ useLayoutEffect(() => {
                   gsap.to(e.target, { scale: 1, duration: 0.3, ease: "power2.out" });
                 }}
               >
-                Learn More
+              Read CV
               </Button>
               </a>
               <a href="https://t.me/ramy_esam">

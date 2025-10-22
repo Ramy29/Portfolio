@@ -98,6 +98,22 @@ export default function AboutMe() {
           ease: "back.out(1.7)",
         }, "-=1.2");
 
+        gsap.utils.toArray("section").forEach((section: any) => {
+  gsap.from(section, {
+    scrollTrigger: {
+      trigger: section,
+      start: "top 80%", 
+      end: "bottom 60%",
+      toggleActions: "play none none reverse",
+    },
+    opacity: 0,
+    y: 150,
+    scale: 0.98,
+    duration: 1.2,
+    ease: "power3.out",
+  });
+});
+
       // Skills section - Creative animations
       gsap.from(".skill-card", {
         y: 80,
@@ -222,7 +238,7 @@ export default function AboutMe() {
     {
       year: "2021-2025",
       degree: "Bachelor of Computer Science",
-      institution: "University of Technology",
+      institution: "Arab Open University",
       description: "Specialized in Software Engineering and Web Development",
       achievements: ["Dean's List", "Outstanding Student Award"]
     },
@@ -243,30 +259,30 @@ export default function AboutMe() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h1 className={`hero-title text-5xl md:text-7xl font-bold text-gray-900 leading-tight ${playfair.className}`}>
+              <h1 className={`hero-title section-trigger text-5xl md:text-7xl font-bold text-gray-900 leading-tight ${playfair.className}`}>
                 Hi, I am <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Ramy</span>
               </h1>
-              <p className={`hero-subtitle text-2xl text-gray-700 ${grotesk.className}`}>
+              <p className={`hero-subtitle section-trigger text-2xl text-gray-700 ${grotesk.className}`}>
                 Frontend Developer & UI/UX Enthusiast
               </p>
-              <p className="hero-description text-lg text-gray-600 leading-relaxed">
+              <p className="hero-description section-trigger text-lg text-gray-600 leading-relaxed">
                 I am passionate about creating beautiful, functional, and user-friendly web experiences. 
                 With expertise in modern web technologies, I bring ideas to life through clean code and 
                 innovative design solutions.
               </p>
               <div className="flex flex-wrap gap-4">
-                <div className="flex items-center gap-2 px-4 py-2 bg-white/80 rounded-full shadow-lg">
-                  <Code className="w-5 h-5 text-purple-600" />
+                <div className="section-trigger flex items-center gap-2 px-4 py-2 bg-white/80 rounded-full shadow-lg">
+                  <Code className=" w-5 h-5 text-purple-600" />
                   <span className="text-sm font-medium">Frontend Developer</span>
                 </div>
-                <div className="flex items-center gap-2 px-4 py-2 bg-white/80 rounded-full shadow-lg">
+                <div className="section-trigger flex items-center gap-2 px-4 py-2 bg-white/80 rounded-full shadow-lg">
                   <Heart className="w-5 h-5 text-pink-600" />
                   <span className="text-sm font-medium">UI/UX Designer</span>
                 </div>
               </div>
             </div>
             <div className="relative">
-              <div className="hero-image relative w-80 h-80 mx-auto">
+              <div className="hero-image section-trigger relative w-80 h-80 mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full blur-3xl opacity-30"></div>
                 <div className="relative w-full h-full rounded-full flex items-center justify-center">
                  <Image src='/images/Profile 4.jpg' alt='Main photot' width={300} height={300} className='rounded-full'/>
