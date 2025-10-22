@@ -29,7 +29,7 @@ useEffect(() => {
   return () => clearTimeout(timer);
 }, []);
 
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
 useLayoutEffect(() => {
   gsap.registerPlugin(ScrollTrigger);
   
@@ -142,7 +142,7 @@ useLayoutEffect(() => {
     }
   });
 
-}, [isLoading,tl]);
+}, [isLoading]);
 
   return (
     <>
@@ -151,11 +151,15 @@ useLayoutEffect(() => {
         <div className="fixed inset-0 bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 flex items-center justify-center z-50">
           <div ref={loadingRef} className="text-center">
             <div className="w-20 h-20 border-4 border-white/30 border-t-white rounded-full animate-spin mb-4" />
-            <h2 className="text-2xl font-bold text-white">Loading Amazing Experience....</h2>
+            <h2 className="text-2xl font-bold text-white">Loading Amazing Experience...</h2>
           </div>
         </div>
       )}
-      <div />
+
+      {/* Custom Cursor */}
+      <div 
+       
+      />
 
       <section ref={sectionRef} className={`min-h-screen bg-gradient-to-br from-purple-400 via-purple-500 to-pink-400 flex items-center justify-center p-4 relative overflow-hidden bg-[url('/images/heroBg.jpg')] bg-cover bg-center ${grotesk.className}`}>
       {/* Animated background particles */}
