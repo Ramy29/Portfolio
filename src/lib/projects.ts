@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 1,
     name: "Rose E-commerce & Dashboard",
-    image : '/images/Rose mockup.jpg',
+    image: '/images/Rose mockup.jpg',
     description:
       "A modern and responsive e-commerce application built with Next.js and Tailwind CSS. It simulates a real-world shopping experience with a clean UI, advanced dashboard, and essential e-commerce features.",
     github: "https://github.com/Ahmed-Walid2/rose-project",
@@ -18,12 +18,12 @@ export const projects = [
       "Next-intl",
       "React Icons",
     ],
-    message : '* GitHub and live demo are temporarily private while in final review — they ll be publicly available soon!'
+    message: '* GitHub and live demo are temporarily private while in final review — they ll be publicly available soon!'
   },
   {
     id: 2,
     name: "Fitness App (with AI)",
-     image : '/images/Fitness mockup.jpg',
+    image: '/images/Fitness mockup.jpg',
     description:
       "A modern fitness web app that helps users track workouts, monitor progress, and stay motivated. Built with React.js, Tailwind CSS, and Shadcn UI, featuring responsive design, animated UI, dynamic meals, and AI-powered workout plans.",
     github: "https://github.com/SabahHassan123/fitness-app",
@@ -39,13 +39,13 @@ export const projects = [
       "React Icons",
       "Gemini AI",
     ],
-     message : '* GitHub and live demo are temporarily private while in final review — they ll be publicly available soon!'
+    message: '* GitHub and live demo are temporarily private while in final review — they ll be publicly available soon!'
   },
-  
+
   {
     id: 3,
     name: "Redify E-commerce",
-     image : '/images/Redify mockUp.jpg',
+    image: '/images/Redify mockUp.jpg',
     description:
       "Redify – A modern online bookstore with authentication, shopping cart, and Stripe payment integration. Designed with a clean UI and optimized for performance.",
     github: "https://github.com/Ramy29/Redify",
@@ -63,7 +63,7 @@ export const projects = [
   {
     id: 4,
     name: "Twitty (Social Media App)",
-     image : '/images/Twitty mockUp.jpg',
+    image: '/images/Twitty mockUp.jpg',
     description:
       "A Twitter clone built with Next.js, TypeScript, Tailwind CSS, and Shadcn UI. It features infinite scroll, recommended users, notifications, and a dynamic real-time experience.",
     github: "https://github.com/Ramy29/Twitty",
@@ -79,12 +79,12 @@ export const projects = [
   },
   {
     id: 5,
-    name: "Ordery E-commerce",
-     image : '/images/Ordery Mockup.jpg',
+    name: "Perfio Premium Fragrance E-commerce Website",
+    image: '/images/Perfio Mockup.jpg',
     description:
-      "A modern and responsive e-commerce application built with React.js and Tailwind CSS. It provides a realistic shopping experience with a clean interface and essential e-commerce functionalities.",
-    github: "https://github.com/Ramy29/Ordery",
-    liveDemo: "https://ordery-one.vercel.app/",
-    techStack: ["React", "Tailwind", "Formik & Yup", "React Icons"],
+      "A modern and responsive e-commerce application built with Next.js and Tailwind CSS. It provides a realistic shopping experience with a clean interface and essential e-commerce functionalities.",
+    github: "https://github.com/Ramy29/Perfio",
+    liveDemo: "https://perfio.vercel.app/auth/login",
+    techStack: ["Next", "GSAP", "TypeScript", "Tailwind", "Shadcn", "React Icons", "React Icons"],
   },
 ];

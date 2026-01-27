@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  turbopack: {
+    // Fix incorrect root inference when multiple lockfiles exist
+    root: __dirname,
+  },
 };
 
 export default nextConfig;
